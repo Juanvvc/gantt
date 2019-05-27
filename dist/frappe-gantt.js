@@ -554,6 +554,7 @@ class Bar {
 
     draw_resize_handles() {
         if (this.invalid) return;
+        if (!this.gantt.options.editable) return;
 
         const bar = this.$bar;
         const handle_width = 8;
@@ -1076,7 +1077,7 @@ class Gantt {
             popup_trigger: 'click',
             custom_popup_html: null,
             language: 'en',
-            editable: false
+            editable: true
         };
         this.options = Object.assign({}, default_options, options);
     }
@@ -1256,9 +1257,7 @@ class Gantt {
 
     bind_events() {
         this.bind_grid_click();
-        if(this.options.editable) {
-            this.bind_bar_events();
-        }
+        this.bind_bar_events();
     }
 
     render() {
