@@ -1,11 +1,10 @@
 <div align="center">
-    <img src="https://github.com/frappe/design/blob/master/logos/gantt-logo.svg" height="128">
     <h2>Frappe Gantt</h2>
     <p align="center">
         <p>A simple, interactive, modern gantt chart library for the web</p>
-        <a href="https://frappe.github.io/gantt">
-            <b>View the demo »</b>
-        </a>
+        <p>
+        Cloned from: <a href="https://github.com/frappe/gantt">frappe-gantt</a>
+        and modified to allow not editable tasks</p>
     </p>
 </div>
 
