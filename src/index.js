@@ -85,7 +85,7 @@ export default class Gantt {
             popup_trigger: 'click',
             custom_popup_html: null,
             language: 'en',
-            editable: false
+            editable: true
         };
         this.options = Object.assign({}, default_options, options);
     }
@@ -265,9 +265,7 @@ export default class Gantt {
 
     bind_events() {
         this.bind_grid_click();
-        if(this.options.editable) {
-            this.bind_bar_events();
-        }
+        this.bind_bar_events();
     }
 
     render() {
